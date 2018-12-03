@@ -1,3 +1,4 @@
+import asyncpg
 from envparse import env
 from starlette.applications import Starlette
 from starlette.responses import PlainTextResponse
