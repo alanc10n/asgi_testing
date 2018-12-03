@@ -1,0 +1,15 @@
+---
+version: '2'
+services:
+  asgi_test:
+      image: "asgi_test:latest"
+      ports:
+        - "8001:8001"
+      command: python3.6 app.py
+      depends_on:
+        - postgres
+
+  postgres:
+    build:
+      context: ../
+      dockerfile: docker/postgres/Dockerfile
